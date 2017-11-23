@@ -1,25 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   display_file.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bchamsed <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/07 14:32:12 by bchamsed          #+#    #+#             */
-/*   Updated: 2017/11/07 14:32:13 by bchamsed         ###   ########.fr       */
+/*   Created: 2017/11/07 15:07:05 by bchamsed          #+#    #+#             */
+/*   Updated: 2017/11/07 15:07:07 by bchamsed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strcmp(char *s1, char *s2)
-{
-	int x;
+#include <unistd.h>
+#include <fcntl.h>
 
-	x = 0;
-	while (s1[x] != '\0' && s2[x] != '\0')
+void	display_file(int fd)
+{
+	char c;
+
+	while (read(fd, &c, 1) != 0)
+		write(1, &c, 1);
+}
+
+int		main(int argc, char **argv)
+{
+	int fd;
+
+	if (argc != 2)
 	{
-		if (s1[x] != s2[x])
-			return (s1[x] - s2[x]);
-		x++;
+		if (argc > 2)
+			write(2, "Too many arguments.\n", 20);
+		if (argc < 2)
+			write(2, "File name missing.\n", 19);
+		return (1);
 	}
+	fd = open(argv[1], O_RDONLY);
+	display_file(fd);
+	close(fd);
 	return (0);
 }

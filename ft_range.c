@@ -5,12 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: bchamsed <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/20 13:32:15 by bchamsed          #+#    #+#             */
-/*   Updated: 2017/11/20 13:32:16 by bchamsed         ###   ########.fr       */
+/*   Created: 2017/11/07 14:33:17 by bchamsed          #+#    #+#             */
+/*   Updated: 2017/11/07 14:33:19 by bchamsed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
 
 int		*ft_range(int min, int max)
 {

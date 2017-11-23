@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_foreach.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bchamsed <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/07 14:32:12 by bchamsed          #+#    #+#             */
-/*   Updated: 2017/11/07 14:32:13 by bchamsed         ###   ########.fr       */
+/*   Created: 2017/11/07 14:57:25 by bchamsed          #+#    #+#             */
+/*   Updated: 2017/11/07 14:57:26 by bchamsed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strcmp(char *s1, char *s2)
+void	ft_foreach(int *tab, int length, void (*f)(int))
 {
 	int x;
 
 	x = 0;
-	while (s1[x] != '\0' && s2[x] != '\0')
+	while (length > x)
 	{
-		if (s1[x] != s2[x])
-			return (s1[x] - s2[x]);
+		(*f)(tab[x]);
 		x++;
 	}
-	return (0);
 }

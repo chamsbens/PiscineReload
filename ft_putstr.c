@@ -5,15 +5,21 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: bchamsed <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/07 19:24:43 by bchamsed          #+#    #+#             */
-/*   Updated: 2017/11/07 19:24:44 by bchamsed         ###   ########.fr       */
+/*   Created: 2017/11/06 16:01:53 by bchamsed          #+#    #+#             */
+/*   Updated: 2017/11/06 16:02:01 by bchamsed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+void	ft_putchar(char c);
 
-void	ft_putstr(char const *s)
+void	ft_putstr(char *str)
 {
-	if (s)
-		write(1, s, ft_strlen(s));
+	int i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		ft_putchar(str[i]);
+		i++;
+	}
 }

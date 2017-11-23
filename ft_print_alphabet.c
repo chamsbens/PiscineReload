@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bchamsed <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/07 14:32:12 by bchamsed          #+#    #+#             */
-/*   Updated: 2017/11/07 14:32:13 by bchamsed         ###   ########.fr       */
+/*   Created: 2017/11/06 13:29:34 by bchamsed          #+#    #+#             */
+/*   Updated: 2017/11/06 13:32:45 by bchamsed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strcmp(char *s1, char *s2)
-{
-	int x;
+void	ft_putchar(char c);
 
-	x = 0;
-	while (s1[x] != '\0' && s2[x] != '\0')
+void	ft_print_alphabet(void)
+{
+	char a;
+
+	a = 'a';
+	while (a <= 'z')
 	{
-		if (s1[x] != s2[x])
-			return (s1[x] - s2[x]);
-		x++;
+		ft_putchar(a);
+		a++;
 	}
-	return (0);
 }

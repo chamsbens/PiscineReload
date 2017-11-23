@@ -1,25 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_abs.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bchamsed <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/07 14:32:12 by bchamsed          #+#    #+#             */
-/*   Updated: 2017/11/07 14:32:13 by bchamsed         ###   ########.fr       */
+/*   Created: 2017/11/07 15:00:30 by bchamsed          #+#    #+#             */
+/*   Updated: 2017/11/07 15:00:31 by bchamsed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strcmp(char *s1, char *s2)
-{
-	int x;
+#ifndef FT_ABS_H
 
-	x = 0;
-	while (s1[x] != '\0' && s2[x] != '\0')
-	{
-		if (s1[x] != s2[x])
-			return (s1[x] - s2[x]);
-		x++;
-	}
-	return (0);
-}
+# define FT_ABS_H
+
+# define ABS(Value) ((Value < 0) ? -Value : Value)
+
+#endif

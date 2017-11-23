@@ -5,19 +5,17 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: bchamsed <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/07 19:43:13 by bchamsed          #+#    #+#             */
-/*   Updated: 2017/11/07 19:43:16 by bchamsed         ###   ########.fr       */
+/*   Created: 2017/11/06 15:57:08 by bchamsed          #+#    #+#             */
+/*   Updated: 2017/11/06 15:57:11 by bchamsed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-size_t	ft_strlen(const char *s)
+int		ft_strlen(char *str)
 {
-	size_t i;
+	int i;
 
 	i = 0;
-	while (s[i] != '\0')
+	while (str[i] != '\0')
 		i++;
 	return (i);
 }

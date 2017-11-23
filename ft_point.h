@@ -1,25 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_point.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bchamsed <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/07 14:32:12 by bchamsed          #+#    #+#             */
-/*   Updated: 2017/11/07 14:32:13 by bchamsed         ###   ########.fr       */
+/*   Created: 2017/11/07 15:01:03 by bchamsed          #+#    #+#             */
+/*   Updated: 2017/11/07 15:01:04 by bchamsed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strcmp(char *s1, char *s2)
+#ifndef FT_POINT_H
+# define FT_POINT_H
+
+typedef	struct	s_point
 {
 	int x;
+	int y;
+}				t_point;
 
-	x = 0;
-	while (s1[x] != '\0' && s2[x] != '\0')
-	{
-		if (s1[x] != s2[x])
-			return (s1[x] - s2[x]);
-		x++;
-	}
-	return (0);
-}
+#endif
